@@ -12,19 +12,19 @@ Following the Model Context Protocol standard, this server bridges the gap betwe
   ├── Model
   └── MCP Client ──(JSON-RPC / STDIO)──> [ MCP Server (server.py) ] ──> [ Public Weather API / Cache ]
 
-* Host: The AI application (Claude Desktop) that the user interacts with and runs the LLM model[cite: 4, 7].
-* Client: The internal client built into Claude Desktop that manages the lifecycle of the server via standard I/O (STDIO)[cite: 4, 7].
-* Server: The Python script (server.py) you built, which exposes specific weather tools, resources, and prompt templates[cite: 4, 7].
+* Host: The AI application (Claude Desktop) that the user interacts with and runs the LLM model.
+* Client: The internal client built into Claude Desktop that manages the lifecycle of the server via standard I/O (STDIO).
+* Server: The Python script (server.py) you built, which exposes specific weather tools, resources, and prompt templates.
 
 ---
 
 ## 🛠️ Technical Stack & Environment
 
-* Language & Runtime: Python 3.13[cite: 7]
-* Protocol: Model Context Protocol (mcp<2 with FastMCP)[cite: 7]
-* Transport: Standard Input/Output (STDIO)[cite: 7]
-* HTTP Client: httpx[cite: 7]
-* Environment: Windows (PowerShell, Virtual Environment located at C:\Users\s.aakash\mcp-weather-wrapper\venv)[cite: 7]
+* Language & Runtime: Python 3.13
+* Protocol: Model Context Protocol (mcp<2 with FastMCP)
+* Transport: Standard Input/Output (STDIO)
+* HTTP Client: httpx
+* Environment: Windows (PowerShell, Virtual Environment located at C:\Users\s.aakash\mcp-weather-wrapper\venv)
 
 ---
 
@@ -60,7 +60,7 @@ pip install "mcp<2" httpx pytest
 ## 🚀 Testing & Validation
 
 ### Validate via MCP Inspector
-To verify the JSON-RPC stream and test tool schemas in a local web browser interface[cite: 5, 7]:
+To verify the JSON-RPC stream and test tool schemas in a local web browser interface:
 $env:PYTHONUNBUFFERED="1"
 npx @modelcontextprotocol/inspector .\venv\Scripts\python.exe server.py
 
@@ -90,22 +90,10 @@ To register the server with Claude Desktop, add the configuration block to your 
 
 ---
 
-## 📋 Definition of Done Checklist
-
-| Requirement | Status | Implementation Details |
-| :--- | :---: | :--- |
-| Server runs in a real AI app | ✅ Done | Connected to Claude Desktop with active tool execution[cite: 4, 7]. |
-| 2-3 Tools, 1 Resource, 1 Prompt | ✅ Done | Implemented get_current_weather, daily_briefing, cached weather resource, and prompt templates[cite: 6, 7]. |
-| Error Handling & Validation | ✅ Done | Built-in validation returning helpful error messages instead of crashes[cite: 7]. |
-| 3 to 5 Unit Tests | ✅ Done | Included in test_server.py[cite: 7]. |
-| Pushed to GitHub | ✅ Done | Published publicly on GitHub with complete documentation[cite: 7]. |
-
----
-
 ## 📸 Proof of Work & Demo
 
-* Active Connection: Verified inside Claude Desktop Settings showing weather-wrapper as Running[cite: 3, 7].
-* Tool Invocation: Successfully triggered by prompting Claude for weather briefings, evidenced by the native Weather wrapper: Get current weather > execution badge[cite: 4, 7].
+* Active Connection: Verified inside Claude Desktop Settings showing weather-wrapper as Running.
+* Tool Invocation: Successfully triggered by prompting Claude for weather briefings, evidenced by the native Weather wrapper: Get current weather > execution badge.
 
 ---
 
