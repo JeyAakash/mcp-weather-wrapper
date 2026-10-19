@@ -30,13 +30,13 @@ Following the Model Context Protocol standard, this server bridges the gap betwe
 
 ## 📂 Project Structure
 
+```text
 mcp-weather-wrapper/
 ├── server.py                   # Main FastMCP server implementation (Tools, Resources, Prompts)
 ├── test_server.py              # Unit test suite (3-5 tests)
 ├── requirements.txt            # Pinned Python dependencies
 ├── .gitignore                  # Git exclusion rules (venv, cache, logs)
 └── README.md                   # Complete project documentation
-
 ---
 
 ## ⚙️ Setup & Installation Guide
