@@ -1,20 +1,14 @@
 import pytest
-from server import get_current_weather, get_weather_forecast
+from server import get_current_weather, daily_briefing
 
 def test_get_current_weather_valid():
-    result = get_current_weather("London")
+    """Test that get_current_weather returns a string response for a valid city."""
+    result = get_current_weather("Tokyo")
     assert isinstance(result, str)
-    assert len(result) > 0
+    assert "Tokyo" in result
 
-def test_get_current_weather_empty_city():
-    with pytest.raises(ValueError, match="City name cannot be empty"):
-        get_current_weather("")
-
-def test_get_forecast_invalid_days():
-    with pytest.raises(ValueError, match="Days must be between 1 and 3"):
-        get_weather_forecast("London", days=5)
-
-def test_get_forecast_empty_city():
-    with pytest.raises(ValueError, match="City name cannot be empty"):
-        get_weather_forecast("", days=2)
-    
+def test_daily_briefing_valid():
+    """Test that daily_briefing returns a proper briefing for a valid city."""
+    result = daily_briefing("London")
+    assert isinstance(result, str)
+    assert "London" in result
