@@ -1,8 +1,8 @@
-MCP Weather Wrapper Server
+# MCP Weather Wrapper Server
 
 A custom Model Context Protocol (MCP) server built as part of the MCP Internship Program. This project bridges the gap between AI applications (such as Claude Desktop) and external data sources by wrapping weather API functions into structured tools, resources, and prompt templates.
 
-🚀 Architecture Overview
+# 🚀 Architecture Overview
 
 [Host: Claude Desktop] ──(STDIO)──> [MCP Client] ──> [MCP Server (server.py)] ──> [Weather API / Cache]
 
@@ -13,7 +13,7 @@ Client: The internal MCP client built into Claude Desktop communicating over sta
 
 Server: Custom Python server (server.py) exposing weather briefing tools and cached data.
 
-🛠️ Technical Stack & Architecture
+# 🛠️ Technical Stack & Architecture
 
 Language & Runtime: Python 3.13
 
@@ -25,31 +25,31 @@ HTTP Client: httpx for asynchronous HTTP requests
 
 Testing & Inspection: pytest and @modelcontextprotocol/inspector
 
-📂 Core Implementation Details
+# 📂 Core Implementation Details
 
 The core server logic is implemented in server.py and provides the following protocol features:
 
-🛠️ Tools
+# 🛠️ Tools
 
 get_current_weather(city: str): Fetches real-time or mocked current weather data for a specified location.
 
 daily_briefing(city: str): Generates a comprehensive morning weather briefing for a specified location.
 
-📦 Resources
+# 📦 Resources
 
 weather://cached/latest: Exposes a cached endpoint for the last retrieved weather result.
 
-💬 Prompt Templates
+# 💬 Prompt Templates
 
 daily_briefing_prompt(city: str): Provides structured prompt templates to guide model interactions and user context.
 
-🛡️ Error Handling & Validation
+# 🛡️ Error Handling & Validation
 
 Built-in input validation handles missing parameters or invalid locations gracefully, returning descriptive error messages rather than throwing unhandled exceptions or stack traces.
 
-⚙️ Setup, Configuration, and Integration
+# ⚙️ Setup, Configuration, and Integration
 
-1. Local Environment Setup
+# 1. Local Environment Setup
 
 Clone the repository and set up a virtual environment:
 
@@ -70,7 +70,7 @@ source venv/bin/activate
 pip install "mcp<2" httpx pytest
 
 
-2. Claude Desktop Integration
+# 2. Claude Desktop Integration
 
 Register the server in Claude Desktop by editing %APPDATA%\Claude\claude_desktop_config.json (Windows) or ~/Library/Application Support/Claude/claude_desktop_config.json (macOS):
 
