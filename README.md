@@ -25,28 +25,6 @@ HTTP Client: httpx for asynchronous HTTP requests
 
 Testing & Inspection: pytest and @modelcontextprotocol/inspector
 
-# 📂 Core Implementation Details
-
-The core server logic is implemented in server.py and provides the following protocol features:
-
-# 🛠️ Tools
-
-get_current_weather(city: str): Fetches real-time or mocked current weather data for a specified location.
-
-daily_briefing(city: str): Generates a comprehensive morning weather briefing for a specified location.
-
-# 📦 Resources
-
-weather://cached/latest: Exposes a cached endpoint for the last retrieved weather result.
-
-# 💬 Prompt Templates
-
-daily_briefing_prompt(city: str): Provides structured prompt templates to guide model interactions and user context.
-
-# 🛡️ Error Handling & Validation
-
-Built-in input validation handles missing parameters or invalid locations gracefully, returning descriptive error messages rather than throwing unhandled exceptions or stack traces.
-
 # ⚙️ Setup, Configuration, and Integration
 
 # 1. Local Environment Setup
