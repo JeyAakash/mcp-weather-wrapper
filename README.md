@@ -68,7 +68,7 @@ Register the server in Claude Desktop by editing %APPDATA%\Claude\claude_desktop
 }
 
 
-🧪 Verification & Testing
+# 🧪 Verification & Testing
 
 Unit Testing Suite
 
@@ -85,6 +85,6 @@ $env:PYTHONUNBUFFERED="1"
 npx @modelcontextprotocol/inspector .\venv\Scripts\python.exe server.py
 
 
-📸 Proof of Work & Demonstration
+# 📸 Proof of Work & Demonstration
 
 Once configured, the weather-wrapper server connects directly with Claude Desktop. The model can automatically discover, select, and execute weather tools to generate structured, context-aware briefings based on user prompts.
